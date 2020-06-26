@@ -109,7 +109,7 @@ export default class ExpenseForm extends Component{
                 value={this.state.note}
                 onChange={this.onNoteChange}
                 />
-                <button>Add Expense</button>
+                <button>Save Expense</button>
             </form>
         </div>
         );}
