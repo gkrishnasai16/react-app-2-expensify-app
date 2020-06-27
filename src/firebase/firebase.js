@@ -1,5 +1,6 @@
 import * as firebase from 'firebase';
 
+
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -15,5 +16,6 @@ const firebaseConfig = {
     firebase.initializeApp(firebaseConfig); 
 
     const database = firebase.database();
-
-    export {firebase, database as default };
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    const yahooAuthProvider = new firebase.auth.OAuthProvider('yahoo.com');
+    export {firebase, googleAuthProvider, yahooAuthProvider,database as default };
