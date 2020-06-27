@@ -10,7 +10,7 @@ export default (props) =>(
                 <h3
                 className ="list-item__title"
                 >{props.expense.description}</h3>
-                <span className="list-item__sub-title"> {moment(props.expense.createdAt).format('MMMM do, YYYY')}</span>
+                <span className="list-item__sub-title"> {moment(props.expense.createdAt).format('LL')}</span>
             </div>
             <h3 
             className="list-item__data"
