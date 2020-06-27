@@ -1,0 +1,29 @@
+.button {
+    background: $blue;
+    color: white;
+    border: none;
+    display: inline-block;
+    font-weight: 300;
+    font-size: $font-size-large;
+    padding: $s-size;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.button--secondary {
+    background: #888;
+}
+
+.button--link {
+    background: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-gmailButton {
+    margin: 0 0 $s-size 0;
+}

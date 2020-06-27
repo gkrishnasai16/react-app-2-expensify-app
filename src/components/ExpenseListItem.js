@@ -5,12 +5,15 @@ import moment from 'moment';
 
 
 export default (props) =>(
-    <div>
-        <Link to={`/edit/${props.expense.id}`}><h3>{props.expense.description}</h3></Link>
-        <p>
-            <NumberFormat thousandSeparator={true} thousandsGroupStyle="lakh" prefix={'₹'} value={props.expense.amount} displayType={'text'}/> 
-            - 
-            {moment(props.expense.createdAt).format('MMMM do, YYYY')}
-        </p>
-    </div>
+        <Link className="list-item" to={`/edit/${props.expense.id}`}>
+            <div>
+                <h3
+                className ="list-item__title"
+                >{props.expense.description}</h3>
+                <span className="list-item__sub-title"> {moment(props.expense.createdAt).format('MMMM do, YYYY')}</span>
+            </div>
+            <h3 
+            className="list-item__data"
+            ><NumberFormat thousandSeparator={true} thousandsGroupStyle="lakh" prefix={'₹'} value={props.expense.amount} displayType={'text'}/> </h3>
+        </Link>
 );
